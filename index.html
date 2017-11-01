@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script scr="plugins/bootstrap-dropdown.js"></script>
+    <script scr="plugins/bootstrap-tab.js"></script>
+    <script src="script.js"></script>
+
+    <title>Memory Match Game</title>
+</head>
+
+<body>
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Vector Art<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Submenu 1-1</a></li>
+                    <li><a href="#">Submenu 1-2</a></li>
+                    <li><a href="#">Submenu 1-3</a></li>
+                </ul>
+            </li>
+        </ul>
+        <h1>title</h1>
+    </header>
+    
+    <main-div class="container-fluid main-contain">
         
-    </head>
-    <body>
-        
-    </body>
+        <stats-div class="col-md-3 stats-contain">
+        </stats-div>
+
+        <game-div class="col-md-9 game-contain">
+          
+           <divCard class="col-md-1 col-xs-2 card">
+               <divFront class="front">
+                   <img src="images/ace.jpg" alt="">
+               </divFront>
+               <divBack class="back">
+                   <img src="images/card_back.png" alt="">
+               </divBack>
+           </divCard>
+            
+           <divCard class="col-md-1 col-xs-2 card">
+               <divFront class="front">
+                   <img src="images/ace.jpg" alt="">
+               </divFront>
+               <divBack class="back">
+                   <img src="images/card_back.png" alt="">
+               </divBack>
+           </divCard>
+           
+           <divCard class="col-md-1 col-xs-2 card">
+               <divFront class="front">
+                   <img src="images/king.jpg" alt="">
+               </divFront>
+               <divBack class="back">
+                   <img src="images/card_back.png" alt="">
+               </divBack>
+           </divCard>
+            
+           <divCard class="col-md-1 col-xs-2 card">
+               <divFront class="front">
+                   <img src="images/king.jpg" alt="">
+               </divFront>
+               <divBack class="back">
+                   <img src="images/card_back.png" alt="">
+               </divBack>
+           </divCard>
+        </game-div>
+    </main-div>
+</body>
 </html>

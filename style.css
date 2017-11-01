@@ -1,0 +1,38 @@
+.main-contain {
+    margin: 0;
+    padding: 0;
+}
+.stats-contain,
+.game-contain {
+    display: inline-block;
+    border: 1px solid blue;
+    height: 85vh;
+    vertical-align: top;
+}
+
+.card{
+    margin: 0;
+    padding: 0;
+    border: 1px green solid;
+    position: relative;
+    height: 30%;
+}
+
+.back, .front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+}
+
+.flipped .back {
+    display: none;
+}
+
+.matched {
+    visibility: hidden;
+}
