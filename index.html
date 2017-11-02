@@ -14,7 +14,7 @@
     <title>Memory Match Game</title>
 </head>
 
-<body>
+<body onload="onLoad()">
     <header>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#">Home</a></li>
@@ -30,50 +30,203 @@
         </ul>
         <h1>title</h1>
     </header>
-    
+
     <main-div class="container-fluid main-contain">
-        
-        <stats-div class="col-md-3 stats-contain">
+
+        <stats-div class="col-md-4 stats-contain">
+            <div class="row statsRow">
+                <div class="accuracy col-md-2">
+                    <div class="statsText">Accuracy</div>
+                    <div class="value"></div>
+                </div>
+            </div>
+
+            <div class="row statsRow">
+
+                <div class="attempts col-md-2">
+                    <div class="statsText">Attempts</div>
+                    <div class="value"></div>
+                </div>
+            </div>
+
+            <div class="row statsRow">
+
+                <div class="games-played col-md-2">
+                    <div class="statsText">Games Played</div>
+                    <div class="value"></div>
+                </div>
+            </div>
+
+            <div class="row statsRow">
+
+                <div class="reset col-md-2">Reset Button here</div>
+            </div>
         </stats-div>
 
-        <game-div class="col-md-9 game-contain">
-          
-           <divCard class="col-md-1 col-xs-2 card">
-               <divFront class="front">
-                   <img src="images/ace.jpg" alt="">
-               </divFront>
-               <divBack class="back">
-                   <img src="images/card_back.png" alt="">
-               </divBack>
-           </divCard>
-            
-           <divCard class="col-md-1 col-xs-2 card">
-               <divFront class="front">
-                   <img src="images/ace.jpg" alt="">
-               </divFront>
-               <divBack class="back">
-                   <img src="images/card_back.png" alt="">
-               </divBack>
-           </divCard>
-           
-           <divCard class="col-md-1 col-xs-2 card">
-               <divFront class="front">
-                   <img src="images/king.jpg" alt="">
-               </divFront>
-               <divBack class="back">
-                   <img src="images/card_back.png" alt="">
-               </divBack>
-           </divCard>
-            
-           <divCard class="col-md-1 col-xs-2 card">
-               <divFront class="front">
-                   <img src="images/king.jpg" alt="">
-               </divFront>
-               <divBack class="back">
-                   <img src="images/card_back.png" alt="">
-               </divBack>
-           </divCard>
+        <game-div class="col-md-8 game-contain">
+            <div class="row cardRow">
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/deadpool.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/deadpool.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/capamerica.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/deathstroke.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/deathstroke.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/capamerica.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+
+
+
+            </div>
+
+            <div class="row cardRow">
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/drdoom.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/drdoom.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/flash.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/flash.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/redskull.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/redskull.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+            </div>
+
+            <div class="row cardRow">
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/spawn.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/spawn.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/thanos.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/thanos.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/thing.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+                <divCard class="col-md-1 col-xs-2 card">
+                    <divFront class="front">
+                        <img src="images/thing.svg" alt="">
+                    </divFront>
+                    <divBack class="back">
+                        <img src="images/backb.png" alt="">
+                    </divBack>
+                </divCard>
+            </div>
+
+
         </game-div>
     </main-div>
 </body>
+
 </html>

@@ -1,3 +1,9 @@
+body {
+    background-image: url(images/70122-ODLEVR-343.jpg);
+}
+h1 {
+    margin-bottom: 2%;
+}
 .main-contain {
     margin: 0;
     padding: 0;
@@ -10,12 +16,26 @@
     vertical-align: top;
 }
 
+.cardRow{
+    width: 100%;
+    height: 33%;
+}
+
+.statsRow{
+    width: 100%;
+    height: 25%;
+    border: 1px red solid;
+}
 .card{
-    margin: 0;
+    margin-right: 5%;
+    margin-left: 2%;
+    margin-top: 1%;
     padding: 0;
-    border: 1px green solid;
+    border: 2px black solid;
     position: relative;
-    height: 30%;
+    height: 80%;
+    border-radius: 20px;
+    
 }
 
 .back, .front {
@@ -27,6 +47,10 @@
 .card img {
     height: 100%;
     width: 100%;
+    border-radius: 20px;
+}
+
+.card .back img{
 }
 
 .flipped .back {
