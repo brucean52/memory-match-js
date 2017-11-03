@@ -19,9 +19,22 @@ h1 {
     font-size: 3vw;
 }
 
-.headBar {
-    background-color: rgba(255, 255, 255, 0.8);
+#headBar{
+    #background-color: rgba(30, 90, 255, 0.8);
 }
+
+#headBar>.active>a{
+    #background-color: rgba(30, 200, 225, 0.8);
+}
+
+#headBar>li>a {
+    color: white;
+}
+
+#headBar >.active>a {
+    color: black;
+}
+
 .progress{
     height: 15%;
     width: 50%;
