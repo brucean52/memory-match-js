@@ -14,9 +14,11 @@ function display_stats() {
     } else {
         accuracy = (matches / attempts) * 100;
         accuracy = Math.trunc(accuracy) + '%';
+        $('.progress-bar').css('width', accuracy);
+        $('.progress-bar-value').text(accuracy);
     }
     
-    $('.games-played .value').text(games_played);
+    $('.games-played .value').text(":  " +games_played);
     $('.accuracy .value').text(accuracy);
     $('.attempts .value').text(attempts);
 }

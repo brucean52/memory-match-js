@@ -16,7 +16,7 @@
 
 <body onload="onLoad()">
     <header>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs headBar">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
@@ -28,38 +28,50 @@
                 </ul>
             </li>
         </ul>
-        <h1>title</h1>
+        <h1>Match Two!</h1>
     </header>
 
-    <main-div class="container-fluid main-contain">
+    <main-div class="container main-contain">
 
         <stats-div class="col-md-4 stats-contain">
-            <div class="row statsRow">
-                <div class="accuracy col-md-2">
-                    <div class="statsText">Accuracy</div>
-                    <div class="value"></div>
+            <img src="images/statsbubble.png" alt="">
+            <div class="row statsRow1">
+               
+                   <div id="accuracy">Accuracy</div>
+
+                <div class="accuracy progress">
+                    <div class="progress-bar" role="progressbar">
+                        <div class="progress-bar-value"></div>
+                    </div>
+
                 </div>
+
+                 
             </div>
 
-            <div class="row statsRow">
+            <div class="row statsRow2">
 
+               
                 <div class="attempts col-md-2">
-                    <div class="statsText">Attempts</div>
-                    <div class="value"></div>
+                   
+                    <div class="statsText" id="attempts">Attempts: </div>
+                    <div class="value" id="attemptsVal"></div>
                 </div>
             </div>
 
-            <div class="row statsRow">
+            <div class="row statsRow3">
 
                 <div class="games-played col-md-2">
-                    <div class="statsText">Games Played</div>
-                    <div class="value"></div>
+                    <div class="statsText" id="gamesPlayed">Games<br/>Played</div>
+                    <div class="value" id="gamesPlayedVal"></div>
                 </div>
             </div>
 
             <div class="row statsRow">
 
-                <div class="reset col-md-2">Reset Button here</div>
+                <div class="reset col-md-2">
+                    <img src="" alt="">
+                </div>
             </div>
         </stats-div>
 
