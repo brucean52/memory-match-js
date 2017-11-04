@@ -9,7 +9,7 @@
     src: url(batmfa__.ttf);
 }
 
-body {
+.mainBody {
     background-image: url(images/background.png);
 }
 
@@ -38,12 +38,12 @@ h1 {
     background-color: rgba(27, 55, 126, 0.9);
     border: 2px #2d3f6d;
 }
-#headBar > li > a {
+#headBar > li > a, .dropdown-menu >li a {
     color: white;
     font-weight: bold;
 }
 
-#headBar > li > a:hover {
+#headBar > li > a:hover,  .dropdown-menu >li a:hover {
     color: #b3e9ff;
     background-color: transparent;
     border: none;
@@ -51,6 +51,14 @@ h1 {
 
 #headBar > .active > a {
     color: white;
+}
+
+.dropdown-menu {
+    background-color: rgba(0, 74, 148, 0.7);
+}
+
+.nav .open>a{
+    background-color: rgba(27, 55, 126, 0.9);
 }
 
 .progress {
