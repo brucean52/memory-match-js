@@ -143,8 +143,8 @@ function card_clicked(elem, event) {
         console.log("Attempts: " + attempts);
         
         //for testing only
-        popImg(event);
-        $('.popImg').fadeOut(2300, 'swing');
+//        popImg(event);
+//        $('.popImg').fadeOut(2300, 'swing');
 
         //clean this up
         if ($(first_card_clicked).find('.front img').attr('src') == $(second_card_clicked).find('.front img').attr('src')) {
@@ -157,6 +157,7 @@ function card_clicked(elem, event) {
 
             if (match_counter == total_possible_matches) {
                 //game is over
+                //add modal
                 console.log('game is won!');
                 games_played++;
                 display_stats;
@@ -174,26 +175,30 @@ function card_clicked(elem, event) {
 
 }
 
+function game_finish() {
+    
+}
+
 function popImg(event){
     
 //                $(cardElem).parent().closest('.cardRow').append($("<img class='popImg'>").attr("src", 'images/cool.svg'));
     
     //$('body').append($("<img class='popImg'>").attr("src", 'images/cool.svg'));
-        mouseX = event.clientX - 200;
-    mouseY = event.clientY -180;
+        mouseX = event.clientX - 150;
+    mouseY = event.clientY -120;
     
     console.log(mouseX);
     console.log(mouseY);
 //        
     var leftPx = mouseX+'px';
     var topPx = mouseY+'px';
-//    var popArray = ["images/cool.svg", "images/bam.svg", "images/boom.svg", "images/pow.svg" ];
-//    var popArrIndex = Math.floor((Math.random() * 3) + 1);
-//    console.log('popArrIndex: '+popArrIndex);
+    var popArray = ["images/cool.svg", "images/bam.svg", "images/boom.svg", "images/pow.svg" ];
+    var popArrIndex = Math.floor((Math.random() * 4));
+    console.log('popArrIndex: '+popArrIndex);
     
     
     //$('.popImg').attr('src', 'images/cool.svg');
-    $('body').append($("<img class='popImg'>").attr("src", 'images/bam.svg'));
+    $('body').append($("<img class='popImg'>").attr("src", popArray[popArrIndex]));
     
     //$('.popImg').css('display', '');
     $('.popImg').css('left', leftPx);
