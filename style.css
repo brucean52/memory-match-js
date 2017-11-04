@@ -13,6 +13,10 @@
     background-image: url(images/background.png);
 }
 
+.aboutBody {
+    #background-image: url(images/background-about.jpg);
+}
+
 h1 {
 
     text-align: center;
@@ -234,10 +238,10 @@ h1 {
 }
 
 #imgReset:hover {
-    filter: contrast(130%);
+    filter: brightness(120%);
 }
 #imgReset:active {
-    filter: contrast(110%) brightness(115%);
+    filter: contrast(70%) brightness(135%);
     transform: translateY(2px);
 }
 
