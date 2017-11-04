@@ -95,6 +95,7 @@ h1 {
     height: 90%;
     width: 90%;
     right: -5%;
+    top: -3%;
     position: absolute;
 }
 
@@ -148,7 +149,7 @@ h1 {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 60%;
 }
 
@@ -160,7 +161,7 @@ h1 {
 }
 
 #reset {
-    bottom: 0%;
+    bottom: 2%;
     left: 25%;
     font-size: 1.3vw;
     text-shadow: -2px 2px 2px #888888;
@@ -185,14 +186,14 @@ h1 {
 
 #accuracy {
     position: absolute;
-    left: 42%;
+    left: 43%;
     font-size: 1.8vw;
     font-family: batman;
     top: 35%;
 }
 
 #attempts {
-    right: 15%;
+    right: 17%;
 }
 
 #attemptsVal {

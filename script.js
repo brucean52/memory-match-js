@@ -46,6 +46,8 @@ function reset_stats() {
     accuracy = 0;
     attempts = 0;
     matches = 0;
+               $('.progress-bar').css('width', accuracy);
+            $('.progress-bar-value').text('');
     display_stats();
     randomizeCards();
     $('.card.matched').removeClass('matched');
