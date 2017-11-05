@@ -419,3 +419,14 @@ vertical-align: middle;
 h3 {
     margin-top: 5%;
 }
+.modal {
+margin-left: 25%;
+    margin-right: 25%;
+}
+.modal-content {
+    width: 100%;
+}
+
+.modal-body  img {
+width: 100%;
+}

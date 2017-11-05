@@ -108,7 +108,7 @@ function initializeApp() {
 //    });
 
     $('#imgReset').on('click', reset_stats);
-    
+    $('.modalReset').on('click', reset_stats);
 //    $('.tabletScreen img').on('hover', tablet_hover);
 //    $('.tabletScreen img').on('active', tablet_click);
 }
@@ -142,6 +142,7 @@ function card_clicked(elem, event) {
         $(elem).addClass('flipped');
         first_card_clicked = elem;
         console.log("first card clicked: ");
+        game_finish();
         //assign first card clicked to the html DOM element that was clicked
     } else if (first_card_clicked != null && second_card_clicked != null) {
         //do nothing
@@ -192,6 +193,9 @@ function card_clicked(elem, event) {
 }
 
 function game_finish() {
+    //modal
+    $('#myModal').modal('show');
+    console.log('game finished');
     
 }
 
