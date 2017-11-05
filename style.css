@@ -65,7 +65,7 @@
     font-weight: bold;
 }
 
-#headBar > li > a:hover,  .dropdown-menu >li a:hover {
+#headBar > li > a:hover, .dropdown-menu >li a:hover {
     color: #b3e9ff;
     background-color: transparent;
     border: none;
@@ -366,7 +366,7 @@ margin: 0;
 .wordCloud Img {
     width: 50%;
     
-    filter: drop-shadow(5px 5px 5px #666666)
+    filter: drop-shadow(8px 8px 5px #666666)
 }
 
 .portfolio-contain {
@@ -378,7 +378,7 @@ margin: 0;
 }
 
 .portfolioIcon img{
-    box-shadow: -4px 6px 2px #888888;
+    box-shadow: -6px 8px 3px #888888;
  border-radius: 40px;
     
 }
@@ -414,4 +414,8 @@ vertical-align: middle;
 }
 .empty{
     margin-right: 5%;
+}
+
+h3 {
+    margin-top: 5%;
 }
