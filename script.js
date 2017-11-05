@@ -17,12 +17,13 @@ function display_stats() {
         //$('.progress-bar-value').text('');
     } else {
         accuracy = (matches / attempts) * 100;
-        if (accuracy < 20 && accuracy > 0) { //progress bar = red
+        if (accuracy < 10 && accuracy > 0) { 
+            //progress bar = red
             $('.progress-bar').css('background-color', '#CC0000');
             accuracy = Math.trunc(accuracy) + '%';
             $('.progress-bar').css('width', accuracy);
             $('.progress-bar-value').text(accuracy);
-        } else if (accuracy >= 20) {
+        } else if (accuracy >= 10) {
             //progress bar = green
             $('.progress-bar').css('background-color', '#00CC00');
             accuracy = Math.trunc(accuracy) + '%';
@@ -107,7 +108,20 @@ function initializeApp() {
 //    });
 
     $('#imgReset').on('click', reset_stats);
+    
+//    $('.tabletScreen img').on('hover', tablet_hover);
+//    $('.tabletScreen img').on('active', tablet_click);
 }
+
+//function tablet_hover() {
+//    console.log("tabletScreen hovered");
+//    $('.tabletScreen img').attr('src', 'images/screen_hover.png');
+//}
+//
+//function tablet_click() {
+//    console.log("tabletScreen clicked");
+//    $('.tabletScreen img').attr('src', 'images/screen_active.png');
+//}
 
 function findOffset(elem){
      //console.log(elem);
@@ -154,7 +168,7 @@ function card_clicked(elem, event) {
 
             //console.log(test);
             popImg(event);
-            $('.popImg').fadeOut(2300, 'swing');
+            $('.popImg').fadeOut(2500, 'swing');
             setTimeout(matched, 2000);
 
             if (match_counter == total_possible_matches) {

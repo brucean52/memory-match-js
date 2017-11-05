@@ -9,15 +9,33 @@
     src: url(batmfa__.ttf);
 }
 
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: url(Montserrat-SemiBold.Otf);
+}
+
+
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url(Roboto-Regular.ttf);
+}
+
 .mainBody {
     background-image: url(images/background.png);
 }
 
-.aboutBody {
-    #background-image: url(images/background-about.jpg);
-}
 
-h1 {
+.gameTitle {
 
     text-align: center;
     font-family: Adventure;
@@ -275,4 +293,125 @@ h1 {
     height: 20%;
     width: 20%;
     position: absolute;
+}
+
+.aboutBody {
+    #background-image: url(images/circuits-background3.jpg);
+    text-align: center;
+    background-color: #f5f5f5;
+    
+}
+
+
+.aboutText {
+    text-align: center;
+    font-family: Montserrat-SemiBold;
+}
+
+
+.pic-contain {
+    height: 35vh;
+    width: 100%;
+    #border: 1px black solid;
+    #box-shadow: 0px 5px 5px #666666;
+    #vertical-align: middle;
+    padding: 0;
+    #background-image: url(images/water2.jpg);
+}
+
+
+.picRow {
+margin: 0;
+    padding: 0;
+
+    
+}
+
+
+.picMe, .wordCloud {
+    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.picMe {
+    height: 100%;
+    #border: 2px blue solid;
+    width: 50%;
+    text-align: right;
+    
+    
+}
+
+.picMe Img {
+    height: 90%;
+    #width: auto;
+    margin-top: 2.5%;
+    border: 2px #666666 solid;
+    border-radius: 220px;
+        box-shadow: -4px 4px 3px #888888;
+    margin-right: 5%;
+}
+
+.wordCloud {
+    #vertical-align: middle;
+    #border: 3px solid red;
+    width: 40%;
+    text-align: left;
+        padding-top: 5%;
+    
+}
+
+.wordCloud Img {
+    width: 50%;
+    
+    filter: drop-shadow(5px 5px 5px #666666)
+}
+
+.portfolio-contain {
+
+    height: 30vh;
+    background-color: 3px black;
+    
+     
+}
+
+.portfolioIcon img{
+    box-shadow: -4px 6px 2px #888888;
+ border-radius: 40px;
+    
+}
+
+.paragraphText {
+     font-family: Roboto-Regular;
+    text-align: justify;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.logoRow {
+vertical-align: middle;
+}
+
+
+
+.builtLogo img{
+    width: 50%;
+
+}
+
+.htmlLogo img {
+    width: 80%;
+}
+
+.cssLogo img{
+    width: 57%;
+}
+
+.queryLogo img{
+    width: 100%;
+}
+.empty{
+    margin-right: 5%;
 }
