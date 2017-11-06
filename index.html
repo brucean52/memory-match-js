@@ -27,27 +27,24 @@
                 </ul>
             </li>
         </ul>
-         <h1 class="gameTitle">Match Two!</h1>
+        <h1 class="gameTitle">Match Two!</h1>
     </header>
-        
-        
+
+
     <main-div class="container main-contain">
-         <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
 
-      <!-- Modal content-->
-      <div class="modal-content">
-
-        <div class="modal-body">
-<!--          <p>Some text in the modal.</p>-->
-       <img src="images/model_win.png" alt="">
+        <!-- Modal for when game is over-->
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="images/model_win.png" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default modalReset" data-dismiss="modal">Replay</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-         <button type="button" class="btn btn-default modalReset" data-dismiss="modal">Replay</button>
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
- </div>  
 
         <stats-div class="col-md-4 stats-contain">
             <img src="images/statsbubble.png" alt="">
@@ -250,12 +247,9 @@
                     </divBack>
                 </divCard>
             </div>
-
-
-
         </game-div>
     </main-div>
-    <!--           <img class="popImg" src="images/cool.svg" alt="">-->
+
 </body>
 
 </html>
