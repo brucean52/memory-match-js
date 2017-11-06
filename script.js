@@ -78,6 +78,7 @@ function card_clicked(elem, event) {
             //cards matched
 
             //console.log(test);
+            matches++;
             popImg(event);
             $('.popImg').fadeOut(2500, 'swing');
             setTimeout(matched, 2000);
@@ -136,8 +137,8 @@ function pick_again() {
 }
 
 function matched() {
-    matches++;
-    //console.log("Matches: " + matches);
+    //matches++;
+    console.log("Matches: " + matches);
     first_card_clicked = null;
     second_card_clicked = null;
     $('.card.flipped').addClass('matched');
