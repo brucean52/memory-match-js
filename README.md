@@ -11,7 +11,8 @@ Match Two! is a comic book themed, memory match game. The game has 18 cards and 
 * An about section with a link to the author's portfolio
 
 ## Screenshots
-![alt text](https://github.com/brucean52/markdown-here/raw/master/src/common/images/icon48.png "Screenshot 1")
+![alt text](https://github.com/brucean52/memory-match-js/blob/master/assets/screenshots/screenshot_1.png "Screenshot 1")
+![alt text](https://github.com/brucean52/memory-match-js/blob/master/assets/screenshots/screenshot_2.png "Screenshot 2")
 
 ## Built With
 
