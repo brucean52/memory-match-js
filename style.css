@@ -19,6 +19,7 @@
     src: url(Roboto-Regular.ttf);
 }
 
+
 .mainBody {
     background-image: url(images/background.png);
     background-size: cover;
@@ -72,16 +73,17 @@
     background-color: rgba(0, 74, 148, 0.7);
 }
 
-.nav .open > a {
+.nav .open > a, .nav .open > a:focus{
     background-color: rgba(27, 55, 126, 0.9);
 }
+
 
 .progress {
     height: 15%;
     width: 50%;
     position: absolute;
     top: 65%;
-    left: 42%;
+    left: 45%;
     border: 3px black solid;
     background-color: #A6A6A6;
     border-radius: 18px;
@@ -113,7 +115,7 @@
     height: 85vh;
 }
 
-.stats-contain img {
+.statsBubble {
     height: 90%;
     width: 90%;
     right: -5%;
@@ -162,7 +164,7 @@
     position: relative;
 }
 
-.reset img {
+.reset>img {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -178,8 +180,8 @@
 #reset {
     bottom: 2%;
     left: 25%;
-    font-size: 1.3vw;
-    text-shadow: -2px 2px 2px #888888;
+    font-size: 1.5vw;
+    text-shadow: -1px 1px 0px #888888;
 }
 
 
@@ -200,22 +202,22 @@
 
 #accuracy {
     position: absolute;
-    left: 43%;
+    left: 45%;
     font-size: 1.8vw;
     font-family: batman;
     top: 35%;
 }
 
 #attempts {
-    right: 17%;
+    right: 15%;
 }
 
 #attemptsVal {
-    right: 3%;
+    right: 5%;
 }
 
 #gamesPlayed {
-    right: 30%;
+    right: 25%;
 }
 
 #gamesPlayedVal {
@@ -224,10 +226,11 @@
 
 }
 
+
+
 .card {
     margin-right: 1%;
     margin-left: 6%;
-    margin-top: 1%;
     padding: 0;
     border: 3px black solid;
     position: relative;
@@ -241,7 +244,7 @@
 }
 
 #imgReset:hover {
-    filter: brightness(120%);
+    filter: brightness(110%);
 }
 
 #imgReset:active {
@@ -259,16 +262,22 @@
 .front {
     background-color: white;
     border-radius: 10px;
+/*    transform: rotateY(180deg);*/
 }
 
 .card img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
+/*
+    transform-style: preserve-3d;
+    transition: all .5s ease-in-out;
+*/
 }
 
 .flipped .back {
     display: none;
+/*    transform: rotateY(180deg); */
 }
 
 .matched {
@@ -370,8 +379,6 @@
     vertical-align: middle;
 }
 
-
-
 .builtLogo img {
     width: 50%;
 
@@ -408,4 +415,79 @@ h3 {
 
 .modal-body img {
     width: 100%;
+}
+
+
+
+@media (max-width: 767px){
+    .card {
+        margin-top: 5%;
+    }
+    
+}
+
+
+@media(min-width:768px) and (max-width:991px) {
+    .stats-contain{
+        position: fixed;
+        left: 2%;
+        background-color: white;
+        top: 20%;
+        height: 70vh;
+        border: black groove 8px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px #666666;
+    }
+    .card{
+        margin-top: 5%;
+    }
+
+
+    
+
+    #reset {
+        bottom: 2%;
+        left: 25%;
+        font-size: 3vw;
+        text-shadow: 1px 1px;
+    }
+    .reset>img{
+        top: 0%;
+        height: 150%;
+        width: 200%;
+    }
+
+    .statsText,
+    .value {
+        font-size: 3vw;
+    }
+
+    #accuracy {
+        position: absolute;
+        left: 10%;
+        font-size: 3vw;
+        font-family: batman;
+        top: 0%;
+    }
+    
+    
+    .progress {
+    height: 30%;
+    width: 80%;
+    top: 40%;
+    left: 10%;
+    box-shadow: -1px 1px 1px #888888;
+    }
+
+    .progress-bar-value {
+        font-size: 2.5vw;
+        margin-top: 2%;
+        margin-left: 5%;
+    }
+
+
+    #gamesPlayed {
+        right: 40%;
+    }
+
 }

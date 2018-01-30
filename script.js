@@ -80,8 +80,8 @@ function card_clicked(elem, event) {
             //console.log(test);
             matches++;
             popImg(event);
-            $('.popImg').fadeOut(2500, 'swing');
-            setTimeout(matched, 2000);
+            $('.popImg').fadeOut(2000, 'swing');
+            setTimeout(matched, 1500);
 
             if (matches == total_possible_matches) {
                 //game is over
@@ -95,7 +95,7 @@ function card_clicked(elem, event) {
 
         } else {
             //pick again
-            setTimeout(pick_again, 2000);
+            setTimeout(pick_again, 1500);
         }
     }
 
