@@ -16,7 +16,7 @@ function onLoad() {
 }
 
 function randomizeCards() {
-    var arrSrc = ["images/capamerica.svg", "images/deadpool.svg", "images/deathstroke.svg", "images/drdoom.svg", "images/flash.svg", "images/redskull.svg", "images/spawn.svg", "images/thanos.svg", "images/thing.svg", "images/capamerica.svg", "images/deadpool.svg", "images/deathstroke.svg", "images/drdoom.svg", "images/flash.svg", "images/redskull.svg", "images/spawn.svg", "images/thanos.svg", "images/thing.svg"];
+    var arrSrc = ["assets/images/capamerica.svg", "assets/images/deadpool.svg", "assets/images/deathstroke.svg", "assets/images/drdoom.svg", "assets/images/flash.svg", "assets/images/redskull.svg", "assets/images/spawn.svg", "assets/images/thanos.svg", "assets/images/thing.svg", "assets/images/capamerica.svg", "assets/images/deadpool.svg", "assets/images/deathstroke.svg", "assets/images/drdoom.svg", "assets/images/flash.svg", "assets/images/redskull.svg", "assets/images/spawn.svg", "assets/images/thanos.svg", "assets/images/thing.svg"];
 
     var j = arrSrc.length;
     var $frontId = '';
