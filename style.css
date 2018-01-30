@@ -1,22 +1,22 @@
 @font-face {
     font-family: 'Adventure';
-    src: url(Adventure.otf);
+    src: url(./assets/fonts/Adventure.otf);
 }
 
 
 @font-face {
     font-family: 'batman';
-    src: url(batmfa__.ttf);
+    src: url(./assets/fonts/batmfa__.ttf);
 }
 
 @font-face {
     font-family: 'Montserrat-SemiBold';
-    src: url(Montserrat-SemiBold.Otf);
+    src: url(./assets/fonts/Montserrat-SemiBold.Otf);
 }
 
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url(Roboto-Regular.ttf);
+    src: url(./assets/fonts/Roboto-Regular.ttf);
 }
 
 

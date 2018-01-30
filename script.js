@@ -6,6 +6,8 @@ var attempts = 0;
 var accuracy = 0;
 var games_played = 0;
 
+$(document).ready(initializeApp);
+
 
 function onLoad() {
     games_played = 0;
@@ -18,7 +20,7 @@ function randomizeCards() {
 
     var j = arrSrc.length;
     var $frontId = '';
-    //if(j ==0) return false;
+    
     while (--j) {
         var k = Math.floor(Math.random() * (j + 1));
         var tempj = arrSrc[j];
@@ -27,16 +29,12 @@ function randomizeCards() {
         arrSrc[k] = tempj;
     }
 
-    //console.log(arrSrc);
     for (var i = 1; i < 19; i++) {
         $frontId = '.front#' + i + " img";
-        //console.log(arrSrc[i - 1]);
         $($frontId).attr('src', arrSrc[i - 1]);
     }
 
 }
-
-$(document).ready(initializeApp);
 
 function initializeApp() {
     $('.card').on('click', function (event) {
@@ -48,36 +46,23 @@ function initializeApp() {
 }
 
 function card_clicked(elem, event) {
-//    console.log("clicked card");
-//    console.log(elem);
 
     if (first_card_clicked === null) {
+        //assign first card clicked to the html DOM element that was clicked
         $(elem).addClass('flipped');
         first_card_clicked = elem;
-        //console.log("first card clicked: ");
 
-        //assign first card clicked to the html DOM element that was clicked
-    } else if (first_card_clicked != null && second_card_clicked != null) {
-        //do nothing
-        //console.log('do nothing');
     } else if (first_card_clicked === elem) {
-        //do nothing
-        //console.log('do nada, clicked the same card');
+        //do nothing when first card is clicked again
     } else if (first_card_clicked != null && second_card_clicked === null) {
-
         //second card
         $(elem).addClass('flipped');
         second_card_clicked = elem;
-        //console.log("second card clicked");
         attempts++;
-        //console.log("Attempts: " + attempts);
 
-
-        //clean this up
         if ($(first_card_clicked).find('.front img').attr('src') == $(second_card_clicked).find('.front img').attr('src')) {
-            //cards matched
+            //check if cards match
 
-            //console.log(test);
             matches++;
             popImg(event);
             $('.popImg').fadeOut(2000, 'swing');
@@ -85,13 +70,10 @@ function card_clicked(elem, event) {
 
             if (matches == total_possible_matches) {
                 //game is over
-                //add modal
                 game_finish();
-                //console.log('game is won!');
                 games_played++;
                 display_stats;
             }
-
 
         } else {
             //pick again
@@ -99,15 +81,10 @@ function card_clicked(elem, event) {
         }
     }
 
-
-
 }
 
 function game_finish() {
-    //modal
     $('#myModal').modal('show');
-    //console.log('game finished');
-
 }
 
 function popImg(event) {
@@ -118,9 +95,6 @@ function popImg(event) {
     var topPx = mouseY + 'px';
     var popArray = ["images/cool.svg", "images/bam.svg", "images/boom.svg", "images/pow.svg"];
     var popArrIndex = Math.floor((Math.random() * 4));
-    //console.log(mouseX);
-    //console.log(mouseY);
-    //console.log('popArrIndex: ' + popArrIndex);
     $('body').append($("<img class='popImg'>").attr("src", popArray[popArrIndex]));
     $('.popImg').css('left', leftPx);
     $('.popImg').css('top', topPx);
@@ -128,16 +102,13 @@ function popImg(event) {
 }
 
 function pick_again() {
-    //console.log('pick again');
     $('.card.flipped').removeClass('flipped');
     first_card_clicked = null;
     second_card_clicked = null;
-    //console.log('first card: ' + first_card_clicked);
     display_stats();
 }
 
 function matched() {
-    //matches++;
     console.log("Matches: " + matches);
     first_card_clicked = null;
     second_card_clicked = null;
@@ -170,13 +141,11 @@ function display_stats() {
 
     }
 
-
     $('.games-played .value').text(":  " + games_played);
     $('.attempts .value').text(attempts);
 }
 
 function reset_stats() {
-    //console.log("reset button clicked");
     games_played++;
     accuracy = 0;
     attempts = 0;
