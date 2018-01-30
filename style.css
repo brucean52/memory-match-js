@@ -417,16 +417,6 @@ h3 {
     width: 100%;
 }
 
-
-
-@media (max-width: 767px){
-    .card {
-        margin-top: 5%;
-    }
-    
-}
-
-
 @media(min-width:768px) and (max-width:991px) {
     .stats-contain{
         position: fixed;
@@ -469,7 +459,6 @@ h3 {
         font-family: batman;
         top: 0%;
     }
-    
     
     .progress {
     height: 30%;
