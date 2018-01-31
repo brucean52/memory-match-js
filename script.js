@@ -122,13 +122,13 @@ function display_stats() {
         //do not display percentage when NaN
     } else {
         accuracy = (matches / attempts) * 100;
-        if (accuracy < 10 && accuracy > 0) {
+        if (accuracy <= 10 && accuracy > 0) {
             //progress bar = red
             $('.progress-bar').css('background-color', '#CC0000');
             accuracy = Math.trunc(accuracy) + '%';
             $('.progress-bar').css('width', accuracy);
             $('#accuracyVal').text(accuracy);
-        } else if (accuracy >= 10) {
+        } else if (accuracy > 10) {
             //progress bar = green
             $('.progress-bar').css('background-color', '#00CC00');
             accuracy = Math.trunc(accuracy) + '%';
@@ -136,7 +136,7 @@ function display_stats() {
             $('#accuracyVal').text(accuracy);
         } else if (accuracy === 0) {
             //no progress text when 0
-            $('#accuracyVal').text('');
+            $('#accuracyVal').text('0');
         }
 
     }
@@ -151,7 +151,7 @@ function reset_stats() {
     attempts = 0;
     matches = 0;
     $('.progress-bar').css('width', accuracy);
-    $('.progress-bar-value').text('');
+    $('#accuracyVal').text('');
     display_stats();
     randomizeCards();
     $('.card.matched').removeClass('matched');
