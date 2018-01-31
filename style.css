@@ -19,6 +19,15 @@
     src: url(./assets/fonts/Roboto-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Comic-Book';
+    src: url(./assets/fonts/comic_book.otf);
+}
+
+body{
+    overflow-x: hidden;
+    user-select: none;
+}
 
 .mainBody {
     background-image: url(assets/images/background.png);
@@ -95,12 +104,14 @@
     background-color: green;
 }
 
+/*
 .progress-bar-value {
     font-size: 1vw;
     text-align: left;
     margin-left: 5%;
     text-shadow: 1px 1px 1px #333333;
 }
+*/
 
 .main-contain {
     margin: 0;
@@ -170,6 +181,7 @@
     position: absolute;
     top: 60%;
     left: 60%;
+    cursor: pointer;
 }
 
 .reset {
@@ -182,6 +194,7 @@
     left: 25%;
     font-size: 1.5vw;
     text-shadow: -1px 1px 0px #888888;
+    cursor: pointer;
 }
 
 
@@ -205,6 +218,11 @@
     left: 45%;
     font-size: 1.8vw;
     font-family: batman;
+    top: 35%;
+}
+#accuracyVal {
+
+    right: 0%;
     top: 35%;
 }
 
@@ -237,6 +255,7 @@
     height: 70%;
     border-radius: 15px;
     box-shadow: 5px 5px 4px #666666;
+    cursor: pointer;
 }
 
 .card:hover .back {
@@ -244,11 +263,15 @@
 }
 
 #imgReset:hover {
-    filter: brightness(110%);
+    filter: brightness(135%) contrast(70%);
 }
 
 #imgReset:active {
     filter: contrast(70%) brightness(135%);
+    transform: translateY(2px);
+}
+
+#reset:active{
     transform: translateY(2px);
 }
 
@@ -292,8 +315,9 @@
 
 .aboutBody {
     text-align: center;
-    background-color: #f5f5f5;
-
+    #background-color: #f5f5f5;
+    background-image: url(assets/images/background.png);
+    background-size: cover;
 }
 
 
@@ -337,7 +361,7 @@
     margin-top: 2.5%;
     border: 2px #666666 solid;
     border-radius: 220px;
-    box-shadow: 4px 4px 3px #888888;
+    box-shadow: 2px 2px 1px #333;
     margin-left: 5%;
 }
 
@@ -351,7 +375,7 @@
 .portButton Img {
     width: 40%;
 
-    filter: drop-shadow(8px 8px 5px #666666)
+    filter: drop-shadow(4px 4px 2px #333333)
 }
 
 .portfolio-contain {
@@ -370,9 +394,11 @@
 
 .paragraphText {
     font-family: Roboto-Regular;
+    font-size: 1.25em;
     text-align: justify;
     margin-left: 25%;
     margin-right: 25%;
+    font-weight: 600;
 }
 
 .logoRow {
@@ -417,7 +443,12 @@ h3 {
     width: 100%;
 }
 
-@media(min-width:768px) and (max-width:991px) {
+/*XS*/
+@media only screen and (max-width: 767px) { 
+    
+    .gameTitle{
+        font-size: 5vw;
+    }
     .stats-contain{
         position: fixed;
         left: 2%;
@@ -430,10 +461,84 @@ h3 {
     }
     .card{
         margin-top: 5%;
+        height: 75%;
     }
 
 
+    #reset {
+        bottom: 2%;
+        left: 25%;
+        font-size: 4vw;
+        text-shadow: 0px 0px;
+        font-family: 'Comic-Book';
+    }
+    .reset>img{
+        top: 50%;
+        height: 100%;
+        width: 200%;
+    }
+
+    .statsText,
+    .value {
+        font-size: 4vw;
+        font-family: 'Comic-Book';
+    }
+
+    #accuracy {
+        position: absolute;
+        left: 5%;
+        font-size: 4vw;
+        font-family: 'Comic-Book';
+        top: 0%;
+    }
     
+    #accuracyVal{
+        top: 0%;
+        right: -10%;
+        font-size: 4vw;
+    }
+    #attempts {
+}
+    #attemptsVal {
+        font-size: 4vw;
+        position: absolute;
+        top: 5%;
+        right: 0%;
+    }
+    .progress {
+        height: 30%;
+        width: 80%;
+        top: 40%;
+        left: 10%;
+        box-shadow: -1px 1px 1px #888888;
+    }
+
+
+    #gamesPlayed {
+        right: 40%;
+    }  
+}
+
+/*SM*/
+@media only screen and (min-width: 768px) and (max-width: 992px) { 
+    .gameTitle{
+        font-size: 6vw;
+    }
+    .stats-contain{
+        position: fixed;
+        left: 2%;
+        background-color: white;
+        top: 20%;
+        height: 70vh;
+        border: black groove 8px;
+        border-radius: 5px;
+        box-shadow: 3px 3px 1px #666666;
+    }
+    .card{
+        margin-top: 5%;
+        height: 90%;
+    }
+
 
     #reset {
         bottom: 2%;
@@ -449,17 +554,26 @@ h3 {
 
     .statsText,
     .value {
+        font-family: 'Comic-Book';
         font-size: 3vw;
     }
 
     #accuracy {
+        font-family: 'Comic-Book';
         position: absolute;
-        left: 10%;
+        left: 15%;
         font-size: 3vw;
-        font-family: batman;
-        top: 0%;
+        top: 5%;
     }
     
+    #accuracyVal{
+        top: 5%;
+        right: 0%;
+    }
+    
+    #attempts {
+        left: 0%;
+    }
     .progress {
     height: 30%;
     width: 80%;
@@ -474,9 +588,11 @@ h3 {
         margin-left: 5%;
     }
 
-
-    #gamesPlayed {
-        right: 40%;
+    #reset{
+        left: 35%;
+        text-shadow: 0px 0px;
     }
-
+    #gamesPlayed {
+        left: 0%;
+    }
 }

@@ -41,7 +41,7 @@ function initializeApp() {
         card_clicked(this, event);
     });
 
-    $('#imgReset').on('click', reset_stats);
+    $('#imgReset, #reset').on('click', reset_stats);
     $('.modalReset').on('click', reset_stats);
 }
 
@@ -93,7 +93,7 @@ function popImg(event) {
     var mouseY = event.clientY - 120;
     var leftPx = mouseX + 'px';
     var topPx = mouseY + 'px';
-    var popArray = ["images/cool.svg", "images/bam.svg", "images/boom.svg", "images/pow.svg"];
+    var popArray = ["/assets/images/cool.svg", "/assets/images/bam.svg", "/assets/images/boom.svg", "/assets/images/pow.svg"];
     var popArrIndex = Math.floor((Math.random() * 4));
     $('body').append($("<img class='popImg'>").attr("src", popArray[popArrIndex]));
     $('.popImg').css('left', leftPx);
@@ -127,21 +127,21 @@ function display_stats() {
             $('.progress-bar').css('background-color', '#CC0000');
             accuracy = Math.trunc(accuracy) + '%';
             $('.progress-bar').css('width', accuracy);
-            $('.progress-bar-value').text(accuracy);
+            $('#accuracyVal').text(accuracy);
         } else if (accuracy >= 10) {
             //progress bar = green
             $('.progress-bar').css('background-color', '#00CC00');
             accuracy = Math.trunc(accuracy) + '%';
             $('.progress-bar').css('width', accuracy);
-            $('.progress-bar-value').text(accuracy);
+            $('#accuracyVal').text(accuracy);
         } else if (accuracy === 0) {
             //no progress text when 0
-            $('.progress-bar-value').text('');
+            $('#accuracyVal').text('');
         }
 
     }
 
-    $('.games-played .value').text(":  " + games_played);
+    $('.games-played .value').text(games_played);
     $('.attempts .value').text(attempts);
 }
 
