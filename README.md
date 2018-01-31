@@ -25,8 +25,3 @@ This game was built with HTML5, CSS3, Javascript, and the resources below.
 ## Author
 
 * **Bruce An** - [LinkedIn](https://www.linkedin.com/in/bruce-lok-an-b8528732/)
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
