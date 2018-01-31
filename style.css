@@ -406,19 +406,22 @@ body{
 }
 
 .builtLogo img {
-    width: 50%;
-
+    width: 80%;
+    filter: drop-shadow(2px 2px 1px #333);
 }
 
 .htmlLogo img {
     width: 80%;
+    filter: drop-shadow(2px 2px 1px #333);
 }
 
 .cssLogo img {
-    width: 57%;
+    width: 80%;
+    filter: drop-shadow(2px 2px 1px #333);
 }
 
 .queryLogo img {
+    margin-top: 30%;
     width: 100%;
 }
 
