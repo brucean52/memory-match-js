@@ -26,14 +26,12 @@
 
 body{
     overflow-x: hidden;
-    user-select: none;
 }
 
-.mainBody {
+.backgroundImg{
     background-image: url(assets/images/background.png);
     background-size: cover;
 }
-
 
 .gameTitle {
     text-align: center;
@@ -104,19 +102,9 @@ body{
     background-color: green;
 }
 
-/*
-.progress-bar-value {
-    font-size: 1vw;
-    text-align: left;
-    margin-left: 5%;
-    text-shadow: 1px 1px 1px #333333;
-}
-*/
-
 .main-contain {
     margin: 0;
     padding: 0;
-
 }
 
 .stats-contain,
@@ -137,6 +125,7 @@ body{
 .game-contain {
     width: 66%;
     position: relative;
+    user-select: none;
 }
 
 .stats-contain {
@@ -221,7 +210,6 @@ body{
     top: 35%;
 }
 #accuracyVal {
-
     right: 0%;
     top: 35%;
 }
@@ -244,11 +232,9 @@ body{
 
 }
 
-
-
 .card {
     margin-right: 1%;
-    margin-left: 6%;
+    margin-left: 4%;
     padding: 0;
     border: 3px black solid;
     position: relative;
@@ -285,22 +271,16 @@ body{
 .front {
     background-color: white;
     border-radius: 10px;
-/*    transform: rotateY(180deg);*/
 }
 
 .card img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
-/*
-    transform-style: preserve-3d;
-    transition: all .5s ease-in-out;
-*/
 }
 
 .flipped .back {
     display: none;
-/*    transform: rotateY(180deg); */
 }
 
 .matched {
@@ -313,17 +293,18 @@ body{
     position: absolute;
 }
 
-.aboutBody {
-    text-align: center;
-    #background-color: #f5f5f5;
-    background-image: url(assets/images/background.png);
-    background-size: cover;
+h1.aboutText{
+    font-size: 3.5em;
 }
 
+h3.aboutText{
+    font-size: 1.8em;
+    margin-top: 5%;
+}
 
 .aboutText {
     text-align: center;
-    font-family: Montserrat-SemiBold;
+    font-family: Adventure;
 }
 
 
@@ -340,23 +321,13 @@ body{
 }
 
 
-.picMe,
-.wordCloud {
-
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .picMe {
     height: 100%;
     width: 50%;
     text-align: left;
-
-
 }
 
-.picMe Img {
+.picMe img {
     height: 90%;
     margin-top: 2.5%;
     border: 2px #666666 solid;
@@ -372,25 +343,21 @@ body{
 
 }
 
-.portButton Img {
+.portButton img {
     width: 40%;
-
-    filter: drop-shadow(4px 4px 2px #333333)
+    filter: drop-shadow(4px 4px 3px #333333);
 }
 
-.portfolio-contain {
-
-    height: 30vh;
-    background-color: 3px black;
-
-
+.portButton img:hover {
+    width: 40%;
+    filter: drop-shadow(4px 4px 3px #333333) invert(100%);
+    cursor: pointer;
 }
 
-.portfolioIcon img {
-    box-shadow: -6px 8px 3px #888888;
-    border-radius: 40px;
-
+.portButton img:active {
+    transform: translateY(4px);
 }
+
 
 .paragraphText {
     font-family: Roboto-Regular;
@@ -401,33 +368,26 @@ body{
     font-weight: 600;
 }
 
-.logoRow {
-    vertical-align: middle;
-}
-
-.builtLogo img {
-    width: 50%;
-
-}
-
-.htmlLogo img {
+.builtLogo img, .htmlLogo img {
     width: 80%;
+    filter: drop-shadow(2px 2px 1px #333);
+    margin-bottom: 5%;
+}
+
+.builtLogo img{
+    margin-bottom: 20%;
 }
 
 .cssLogo img {
-    width: 57%;
+    width: 75%;
+    filter: drop-shadow(2px 2px 1px #333);
+    margin-bottom: 5%;
 }
 
 .queryLogo img {
+    margin-top: 10%;
     width: 100%;
-}
-
-.empty {
-    margin-right: 5%;
-}
-
-h3 {
-    margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .modal {
@@ -497,8 +457,6 @@ h3 {
         right: -10%;
         font-size: 4vw;
     }
-    #attempts {
-}
     #attemptsVal {
         font-size: 4vw;
         position: absolute;
@@ -508,7 +466,7 @@ h3 {
     .progress {
         height: 30%;
         width: 80%;
-        top: 40%;
+        top: 50%;
         left: 10%;
         box-shadow: -1px 1px 1px #888888;
     }
@@ -517,6 +475,16 @@ h3 {
     #gamesPlayed {
         right: 40%;
     }  
+    
+    .picMe img {
+    width: 40%;
+    margin-top: 2.5%;
+    border: 2px #666666 solid;
+    border-radius: 220px;
+    box-shadow: 2px 2px 1px #333;
+    margin-left: 5%;
+    }
+    
 }
 
 /*SM*/
@@ -528,15 +496,15 @@ h3 {
         position: fixed;
         left: 2%;
         background-color: white;
-        top: 20%;
-        height: 70vh;
+        top: 25%;
+        height: 75vh;
         border: black groove 8px;
         border-radius: 5px;
         box-shadow: 3px 3px 1px #666666;
     }
     .card{
         margin-top: 5%;
-        height: 90%;
+        height: 70%;
     }
 
 
@@ -547,9 +515,10 @@ h3 {
         text-shadow: 1px 1px;
     }
     .reset>img{
-        top: 0%;
+        top: 15%;
         height: 150%;
         width: 200%;
+        left: 80%;
     }
 
     .statsText,
@@ -577,7 +546,7 @@ h3 {
     .progress {
     height: 30%;
     width: 80%;
-    top: 40%;
+    top: 50%;
     left: 10%;
     box-shadow: -1px 1px 1px #888888;
     }
@@ -589,10 +558,21 @@ h3 {
     }
 
     #reset{
-        left: 35%;
+        left: 40%;
+        bottom: 0%;
         text-shadow: 0px 0px;
     }
     #gamesPlayed {
         left: 0%;
     }
+    
+    .picMe img {
+    width: 40%;
+    margin-top: 2.5%;
+    border: 2px #666666 solid;
+    border-radius: 220px;
+    box-shadow: 2px 2px 1px #333;
+    margin-left: 5%;
+    }
+    
 }
