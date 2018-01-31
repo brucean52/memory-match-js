@@ -7,7 +7,7 @@ Match Two! is a comic book themed, memory match game. The game has 18 cards and 
 ### Features
 
 * Mobile Responsive
-* Comic book speech bubbles when cards are matched
+* Comic book speech bubbles pop up when cards are matched
 * An about section with a link to the author's portfolio
 
 ## Screenshots
