@@ -69,7 +69,7 @@ body{
 .dropdown-menu > li a:hover {
     color: #b3e9ff;
     background-color: transparent;
-    border: none;
+    border: rgba(27, 55, 126, 0.9);
 }
 
 #headBar > .active > a {
