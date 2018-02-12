@@ -2,7 +2,7 @@
 
 ## Overview
 
-Match Two! is a comic book themed, memory match game. The game has 18 cards and keepts track of accuracy, attempts, and games played. Once the game is won, a modal will pop up to inform the player. 
+Match Two! is a comic book themed, memory match game. The game has 18 cards and keeps track of accuracy, attempts, and games played. Once the game is won, a modal will pop up to inform the player. 
 
 ### Features
 
