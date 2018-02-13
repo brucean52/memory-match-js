@@ -16,7 +16,7 @@ Match Two! is a comic book themed, memory match game. The game has 18 cards and 
 
 ## Built With
 
-This game was built with HTML5, CSS3, Javascript, and the resources below. 
+This game was built with HTML5, CSS3, Javascript, Photoshop, Illustrator, and the resources below. 
 
 * [jQuery v3.2.1](https://jquery.com/) - HTML DOM Manipulation
 * [Bootstrap v3.3.7](https://getbootstrap.com/docs/3.3/) - Mobile Responsive Framework
