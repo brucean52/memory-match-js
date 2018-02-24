@@ -93,7 +93,7 @@ function popImg(event) {
     var mouseY = event.clientY - 120;
     var leftPx = mouseX + 'px';
     var topPx = mouseY + 'px';
-    var popArray = ["/assets/images/cool.svg", "/assets/images/bam.svg", "/assets/images/boom.svg", "/assets/images/pow.svg"];
+    var popArray = ["assets/images/cool.svg", "assets/images/bam.svg", "assets/images/boom.svg", "assets/images/pow.svg"];
     var popArrIndex = Math.floor((Math.random() * 4));
     $('body').append($("<img class='popImg'>").attr("src", popArray[popArrIndex]));
     $('.popImg').css('left', leftPx);
